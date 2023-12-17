@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.algorithms.Array;
+import org.example.algorithms.Hallo;
+import org.example.algorithms.HalloSlava;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -27,11 +32,11 @@ public class Main {
                     case 3:
                         System.out.print("Введите размер массива: ");
                         int size = scanner.nextInt();
-                        double[] numbers = new double[size];
+                        ArrayList<Double> numbers = new ArrayList<>();
                         System.out.println("Введите элементы массива:");
                         for (int i = 0; i < size; i++) {
                             System.out.print((i + 1) + ": ");
-                            numbers[i] = scanner.nextDouble();
+                            numbers.add(scanner.nextDouble());
                         }
                         System.out.println("Элементы массива, кратные 3:" + Array.checkNumbers(numbers));
 
